@@ -1150,35 +1150,11 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 17,
+   "execution_count": null,
    "id": "aa48877c-03a8-4f66-8f69-9ee1cc6b660b",
    "metadata": {},
-   "outputs": [
-    {
-     "ename": "NameError",
-     "evalue": "name 'carSales_df' is not defined",
-     "output_type": "error",
-     "traceback": [
-      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
-      "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
-      "\u001b[0;32m/var/folders/5k/s53bs9tj5vjfhv29tms3w9880000gn/T/ipykernel_44258/4017133672.py\u001b[0m in \u001b[0;36m<module>\u001b[0;34m\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0mcarSales_df\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mhead\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;36m20\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
-      "\u001b[0;31mNameError\u001b[0m: name 'carSales_df' is not defined"
-     ]
-    }
-   ],
-   "source": [
-    "carSales_df.head(20)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "e0499381",
-   "metadata": {},
    "outputs": [],
-   "source": [
-    "carSales_df['Price'] = carSales_df['Price'].str.replace('$', '') "
-   ]
+   "source": []
   }
  ],
  "metadata": {
