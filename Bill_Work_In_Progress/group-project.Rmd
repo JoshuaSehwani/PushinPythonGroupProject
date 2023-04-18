@@ -13,8 +13,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r}
 library(magrittr)
-library(dplyr)
 library(plyr)
+library(dplyr)
 library(ggplot2)
 ```
 
@@ -49,9 +49,16 @@ popular_mpg
 ```
 
 ```{r}
+popular_mpg = online_carsale %>% group_by(MaxMPG) %>% count()
+g_popular_mpg = ggplot(popular_mpg, aes(MaxMPG, n)) + geom_bar(stat = "identity")
+g_popular_mpg_10_50 = g_popular_mpg + scale_x_continuous(limits=c(10, 50))
+g_popular_mpg_10_50
+```
+
+```{r}
 mpg_above_30 = subset(online_carsale_clean_1, MaxMPG >= 30)
 mpg_above_30_automatic = mpg_above_30[grep("Automatic", mpg_above_30$Transmission),]
-mpg_above_30_automatic
+head(mpg_above_30_automatic)
 ```
 
 ```{r}
@@ -69,13 +76,19 @@ popular_most
 
 ```{r}
 car_unique_define = online_carsale_clean_1 %>% 
-                      group_by(online_carsale_clean_1$SellerType,
-                               online_carsale_clean_1$Used.New,
-                               online_carsale_clean_1$Make, 
-                               online_carsale_clean_1$Year, 
-                               online_carsale_clean_1$Model) %>% 
+                      group_by('Seller Type' = online_carsale_clean_1$SellerType,
+                               'Used/New' = online_carsale_clean_1$Used.New,
+                               'Brand' = online_carsale_clean_1$Make, 
+                               'Years' = online_carsale_clean_1$Year, 
+                               'Model' = online_carsale_clean_1$Model) %>% 
                                count()
 head(car_unique_define)
 ```
 
-• - Define what is popular car listing. Is it number of listings of certain type of car? Rating? Or something else? The of popular car listing is the seller type. People like to purchase car from dealer. • - How to uniquely define a type of car? By country made, brand, year, etc? The unique define a type of car would be group them by seller type, new/used, make, year,and model.
+• - Define what is popular car listing. Is it number of listings of certain type of car? Rating? Or something else? 
+
+      The of popular car listing is the seller type. People like to purchase car from dealer. 
+      
+• - How to uniquely define a type of car? By country made, brand, year, etc? 
+
+      The unique define a type of car would be group them by seller type, new/used, make, year,and model.
