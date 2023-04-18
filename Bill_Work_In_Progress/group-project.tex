@@ -1,0 +1,418 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={1},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{1}
+\author{}
+\date{\vspace{-2.5em}2023-04-11}
+
+\begin{document}
+\maketitle
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(magrittr)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'magrittr' was built under R version 4.2.3
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(plyr)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'plyr' was built under R version 4.2.3
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(dplyr)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'dplyr' was built under R version 4.2.3
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'dplyr'
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:plyr':
+## 
+##     arrange, count, desc, failwith, id, mutate, rename, summarise,
+##     summarize
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:stats':
+## 
+##     filter, lag
+\end{verbatim}
+
+\begin{verbatim}
+## The following objects are masked from 'package:base':
+## 
+##     intersect, setdiff, setequal, union
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(ggplot2)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'ggplot2' was built under R version 4.2.3
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{online\_carsale }\OtherTok{=} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"C:}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{Users}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{14154}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{Desktop}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{DS 311}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{group\_project}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{PushinPythonGroupProject}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{sale}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{Online\_Cars\_Sale\_Marketplace.csv"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{online\_carsale\_clean\_1 }\OtherTok{=}\NormalTok{ online\_carsale[online\_carsale}\SpecialCharTok{$}\NormalTok{Price }\SpecialCharTok{!=}\StringTok{"Not Priced"}\NormalTok{,]}
+\FunctionTok{class}\NormalTok{(online\_carsale\_clean\_1}\SpecialCharTok{$}\NormalTok{Price) }\OtherTok{=} \StringTok{"intger"}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{online\_carsale\_clean\_1}\SpecialCharTok{$}\NormalTok{Used.New }\OtherTok{=} \FunctionTok{gsub}\NormalTok{(}\StringTok{".*Certified*."}\NormalTok{, }\StringTok{"Certified"}\NormalTok{,online\_carsale\_clean\_1}\SpecialCharTok{$}\NormalTok{Used.New)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{online\_carsale\_clean\_1 }\OtherTok{=}\NormalTok{ online\_carsale[online\_carsale}\SpecialCharTok{$}\NormalTok{Drivetrain }\SpecialCharTok{!=}\StringTok{"–"}\NormalTok{,]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{3}
+\tightlist
+\item
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{popular\_mpg }\OtherTok{=}\NormalTok{ online\_carsale\_clean\_1 }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{group\_by}\NormalTok{(MaxMPG) }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{count}\NormalTok{() }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{arrange}\NormalTok{(}\FunctionTok{desc}\NormalTok{(n))}
+\NormalTok{popular\_mpg}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 65 x 2
+## # Groups:   MaxMPG [65]
+##    MaxMPG     n
+##     <int> <int>
+##  1     26  1078
+##  2     27   865
+##  3     25   860
+##  4     33   619
+##  5     29   595
+##  6     28   580
+##  7     24   554
+##  8     30   544
+##  9     22   452
+## 10     31   430
+## # i 55 more rows
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{popular\_mpg }\OtherTok{=}\NormalTok{ online\_carsale }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{group\_by}\NormalTok{(MaxMPG) }\SpecialCharTok{\%\textgreater{}\%} \FunctionTok{count}\NormalTok{()}
+\NormalTok{g\_popular\_mpg }\OtherTok{=} \FunctionTok{ggplot}\NormalTok{(popular\_mpg, }\FunctionTok{aes}\NormalTok{(MaxMPG, n)) }\SpecialCharTok{+} \FunctionTok{geom\_bar}\NormalTok{(}\AttributeTok{stat =} \StringTok{"identity"}\NormalTok{)}
+\NormalTok{g\_popular\_mpg\_10\_50 }\OtherTok{=}\NormalTok{ g\_popular\_mpg }\SpecialCharTok{+} \FunctionTok{scale\_x\_continuous}\NormalTok{(}\AttributeTok{limits=}\FunctionTok{c}\NormalTok{(}\DecValTok{10}\NormalTok{, }\DecValTok{50}\NormalTok{))}
+\NormalTok{g\_popular\_mpg\_10\_50}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: Removed 30 rows containing missing values (`position_stack()`).
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: Removed 1 rows containing missing values (`geom_bar()`).
+\end{verbatim}
+
+\includegraphics{group-project_files/figure-latex/unnamed-chunk-7-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mpg\_above\_30 }\OtherTok{=} \FunctionTok{subset}\NormalTok{(online\_carsale\_clean\_1, MaxMPG }\SpecialCharTok{\textgreater{}=} \DecValTok{30}\NormalTok{)}
+\NormalTok{mpg\_above\_30\_automatic }\OtherTok{=}\NormalTok{ mpg\_above\_30[}\FunctionTok{grep}\NormalTok{(}\StringTok{"Automatic"}\NormalTok{, mpg\_above\_30}\SpecialCharTok{$}\NormalTok{Transmission),]}
+\FunctionTok{head}\NormalTok{(mpg\_above\_30\_automatic)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##    Year          Make                  Model Used.New   Price ConsumerRating
+## 4  2021         Honda        Accord Sport SE     Used $28,500            5.0
+## 7  2017         Honda                HR-V LX     Used $20,995            4.6
+## 8  2014 Mercedes-Benz          E-Class E 350     Used $18,985            4.8
+## 18 2021        Subaru      Crosstrek Premium     Used $25,500            4.8
+## 25 2021        Subaru         Forester Sport     Used $29,500            4.9
+## 26 2018        Subaru Crosstrek 2.0i Premium     Used $31,995            4.8
+##    ConsumerReviews SellerType                        SellerName SellerRating
+## 4               36     Dealer               AutoSavvy Las Vegas          4.6
+## 7              200     Dealer Downtown Toyota-Subaru of Oakland          4.4
+## 8              176     Dealer Downtown Toyota-Subaru of Oakland          4.4
+## 18              78     Dealer                  AutoSavvy Lindon          4.4
+## 25             109     Dealer                   AutoSavvy Boise          4.6
+## 26             343     Dealer   Jennifer's Auto Sales & Service          4.0
+##    SellerReviews                         StreetName State Zipcode DealType
+## 4            284        2121 E Sahara Ave Las Vegas    NV   89104     <NA>
+## 7           2695              4145 Broadway Oakland    CA   94611    Great
+## 8           2695              4145 Broadway Oakland    CA   94611    Great
+## 18           121                370 State St Lindon    UT   84042     <NA>
+## 25            96          1745 N Five Mile Rd Boise    ID   83713     <NA>
+## 26            43 15020 E Sprague Ave Spokane Valley    WA   99216     Fair
+##    ComfortRating InteriorDesignRating PerformanceRating ValueForMoneyRating
+## 4            4.9                  5.0               4.9                 5.0
+## 7            4.6                  4.4               4.4                 4.5
+## 8            4.9                  4.8               4.8                 4.6
+## 18           4.9                  4.8               4.8                 4.8
+## 25           4.9                  4.9               4.9                 4.8
+## 26           4.8                  4.8               4.6                 4.8
+##    ExteriorStylingRating ReliabilityRating         ExteriorColor InteriorColor
+## 4                    5.0               5.0                  Gray             –
+## 7                    4.7               4.8 Modern Steel Metallic         Black
+## 8                    4.9               4.8   Lunar Blue Metallic       Saffron
+## 18                   4.8               4.8       Cool-Gray Khaki         Black
+## 25                   4.8               4.9   Ice Silver Metallic          Gray
+## 26                   4.9               4.9    Venetian Red Pearl         Black
+##           Drivetrain MinMPG MaxMPG FuelType      Transmission
+## 4  Front-wheel Drive     29     35 Gasoline     Automatic CVT
+## 7  Front-wheel Drive     28     34 Gasoline     Automatic CVT
+## 8   Rear-wheel Drive     21     30 Gasoline 7-Speed Automatic
+## 18   All-wheel Drive     28     33 Gasoline     Automatic CVT
+## 25   All-wheel Drive     26     33 Gasoline     Automatic CVT
+## 26   All-wheel Drive     27     33 Gasoline     Automatic CVT
+##                        Engine               VIN  Stock. Mileage
+## 4  1.5L I4 16V GDI DOHC Turbo 1HGCV1F49MA038035   54237   10598
+## 7       1.8L I4 16V MPFI SOHC 3CZRU5H32HG703897   T1480   10458
+## 8        3.5L V6 24V GDI DOHC WDDHF5KB3EA778099 224922A   58157
+## 18       2.0L H4 16V GDI DOHC JF2GTAEC0M8340692   53341   11508
+## 25       2.5L H4 16V GDI DOHC JF2SKALC4MH401994   53809   10859
+## 26       2.0L H4 16V GDI DOHC JF2GTADC9JH323841   15919   30849
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{nrow}\NormalTok{(mpg\_above\_30\_automatic)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 3080
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{nrow}\NormalTok{(mpg\_above\_30)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 3174
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{nrow}\NormalTok{(mpg\_above\_30\_automatic)}\SpecialCharTok{/}\FunctionTok{nrow}\NormalTok{(mpg\_above\_30) }\SpecialCharTok{*} \DecValTok{100}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 97.03844
+\end{verbatim}
+
+I. What is the most popular car listing on this platform?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{popular\_most }\OtherTok{=} \FunctionTok{table}\NormalTok{(online\_carsale\_clean\_1}\SpecialCharTok{$}\NormalTok{SellerType)}
+\NormalTok{popular\_most}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## 
+##  Dealer Private 
+##    9332      40
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{car\_unique\_define }\OtherTok{=}\NormalTok{ online\_carsale\_clean\_1 }\SpecialCharTok{\%\textgreater{}\%} 
+                      \FunctionTok{group\_by}\NormalTok{(}\StringTok{\textquotesingle{}Seller Type\textquotesingle{}} \OtherTok{=}\NormalTok{ online\_carsale\_clean\_1}\SpecialCharTok{$}\NormalTok{SellerType,}
+                               \StringTok{\textquotesingle{}Used/New\textquotesingle{}} \OtherTok{=}\NormalTok{ online\_carsale\_clean\_1}\SpecialCharTok{$}\NormalTok{Used.New,}
+                               \StringTok{\textquotesingle{}Brand\textquotesingle{}} \OtherTok{=}\NormalTok{ online\_carsale\_clean\_1}\SpecialCharTok{$}\NormalTok{Make, }
+                               \StringTok{\textquotesingle{}Years\textquotesingle{}} \OtherTok{=}\NormalTok{ online\_carsale\_clean\_1}\SpecialCharTok{$}\NormalTok{Year, }
+                               \StringTok{\textquotesingle{}Model\textquotesingle{}} \OtherTok{=}\NormalTok{ online\_carsale\_clean\_1}\SpecialCharTok{$}\NormalTok{Model) }\SpecialCharTok{\%\textgreater{}\%} 
+                               \FunctionTok{count}\NormalTok{()}
+\FunctionTok{head}\NormalTok{(car\_unique\_define)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## # A tibble: 6 x 6
+## # Groups:   Seller Type, Used/New, Brand, Years, Model [6]
+##   `Seller Type` `Used/New`      Brand Years Model                             n
+##   <chr>         <chr>           <chr> <int> <chr>                         <int>
+## 1 Dealer        Acura Certified Acura  2018 RDX Technology Package            2
+## 2 Dealer        Acura Certified Acura  2019 ILX w/Premium Pkg                 1
+## 3 Dealer        Acura Certified Acura  2019 MDX 3.5L w/Technology Package     1
+## 4 Dealer        Acura Certified Acura  2019 RDX A-Spec                        2
+## 5 Dealer        Acura Certified Acura  2019 RDX Advance Package               2
+## 6 Dealer        Acura Certified Acura  2019 RDX Base                          3
+\end{verbatim}
+
+• - Define what is popular car listing. Is it number of listings of
+certain type of car? Rating? Or something else?
+
+\begin{verbatim}
+  The of popular car listing is the seller type. People like to purchase car from dealer. 
+  
+\end{verbatim}
+
+• - How to uniquely define a type of car? By country made, brand, year,
+etc?
+
+\begin{verbatim}
+  The unique define a type of car would be group them by seller type, new/used, make, year,and model.
+\end{verbatim}
+
+\end{document}
